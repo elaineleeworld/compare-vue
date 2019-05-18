@@ -1,6 +1,6 @@
 # compare-vue
 
-> A Vue.js project
+> A Vue.js project using Sass, Bulma, and a public API call
 
 ## Build Setup
 
