@@ -12,6 +12,8 @@
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
+          v-on:click="toggleNav"
+          v-bind:class="{'is-active': isActive}"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -19,7 +21,7 @@
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
+      <div id="navbarBasicExample" class="navbar-menu" v-bind:class="{'is-active': isActive}">
         <div class="navbar-start">
           <a class="navbar-item r-item">
             <router-link to="/">Home</router-link>
@@ -63,38 +65,7 @@
         </div>
       </div>
     </nav>
-    <!-- <div class="nav has-shadow">
-      <div class="container">
-        <div class="nav-left">
-          <a class="nav-item">My Company</a>
-        </div>
 
-        <span class="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-
-        <div class="nav-right nav-menu">
-          <router-link to="/" class="nav-item r-item">Home</router-link>
-          <router-link to="faq" class="nav-item r-item">Features</router-link>
-          <router-link to="faq" class="nav-item r-item">About</router-link>
-          <router-link to="faq" class="nav-item r-item">FAQ</router-link>
-
-          <div class="nav-item">
-            <p class="control">
-              <a class="button is-primary is-outlined">
-                <span class="icon">
-                  <i class="fa fa-download"></i>
-                </span>
-
-                <span>JOIN NOW</span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>-->
     <router-view>test</router-view>
   </div>
 </template>
@@ -102,7 +73,17 @@
 <script>
 export default {
   // eslint-disable-next-line
-  name: "App"
+  name: "App",
+  data: function() {
+    return {
+      isActive: false
+    };
+  },
+  methods: {
+    toggleNav: function() {
+      this.isActive = !this.isActive;
+    }
+  }
 };
 </script>
 
@@ -111,7 +92,7 @@ export default {
 @import 'mq'
 
 .navbar
-  background-color: #383838
+ 
   a:hover
     color:gray
 .nav-left  a
