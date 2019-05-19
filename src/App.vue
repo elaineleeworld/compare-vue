@@ -4,6 +4,7 @@
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <i class="fas fa-laptop-code is-primary"></i>
+          <!-- <i class="fas fa-hippo"></i> -->
         </a>
         <div class="navbar-item">
           <h2>
@@ -71,13 +72,17 @@
       </div>
     </nav>
 
-    <router-view>test</router-view>
+    <router-view></router-view>
 
     <footer class="footer is-primary">
       <div class="container">
         <div class="columns">
           <div class="column">
-            <p>Crafted with &#10084; in Los Angeles, California @All Rights Reserved. Powered by Elaine Lee</p>
+            <p>
+              Crafted with &#10084; in Los Angeles, California &nbsp;
+              &nbsp;@All Rights Reserved. &nbsp;
+              &nbsp;Powered by Elaine Lee
+            </p>
           </div>
         </div>
         <div class="column has-text-center">
@@ -144,9 +149,10 @@ footer
     margin-left: 20px
     font-size: 30px
 
-.fa-laptop-code
+.fa-hippo, .fa-laptop-code
     background-color: transparent
     color: #00d1b2
+    font-size: 30px
 
 
 </style>

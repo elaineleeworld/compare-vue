@@ -7,7 +7,11 @@
           <div class="is-two-thirds column is-paddingless">
             <h2 class="subtitle is-4">{{ subheading }}</h2>
           </div>
-          <a class="button is-large is-primary" id="learn">Contact Me</a>
+          <a
+            href="mailto:elaneylee@gmail.com"
+            class="button is-large is-primary"
+            id="learn"
+          >Email Me</a>
         </div>
       </div>
     </section>
@@ -75,7 +79,7 @@ export default {
     return {
       heading: "Soar to new heights",
       subheading:
-        "Have a website that your customers enjoy visiting again and again. Contact me today to see what I can for your website."
+        "Have a website that your customers enjoy visiting again and again. Contact me today to see what I can do for your website."
     };
   }
 };
@@ -86,10 +90,12 @@ export default {
 @import '../mq'
 
 .hero 
-  background: url('../assets/clouds.jpg')
+  background: url('../assets/stars.jpeg')
   background-size: cover
   
+  
   .title 
+    color: #fff
     +mobile
       font-weight: bold
     +tablet
@@ -99,6 +105,7 @@ export default {
       margin-top: 2.5rem
 h2 
   margin: 1.5rem 0 2rem 0 !important
+  color: #fff
 
 #learn
   +desktop  
@@ -106,4 +113,7 @@ h2
 .pd
   +tablet
   padding: 2em 0
+
+.fa-lightbulb
+  color: #00d1b2
 </style>
