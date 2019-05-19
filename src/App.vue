@@ -2,9 +2,17 @@
   <div id="app">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        <a class="navbar-item" href="#">
+          <i class="fas fa-laptop-code is-primary"></i>
         </a>
+        <div class="navbar-item">
+          <h2>
+            <strong>Elaine Lee</strong>
+          </h2>&nbsp;
+          &nbsp;
+          &nbsp;
+          <p>Front-End Web Developer</p>
+        </div>
 
         <a
           role="button"
@@ -28,26 +36,14 @@
           </a>
 
           <a class="navbar-item r-item">
-            <router-link to="faq">Features</router-link>
+            <router-link to="faq">Portfolio</router-link>
           </a>
           <a class="navbar-item r-item">
             <router-link to="faq">About</router-link>
           </a>
           <a class="navbar-item r-item">
-            <router-link to="faq">FAQ</router-link>
+            <router-link to="faq">Contact</router-link>
           </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">More</a>
-
-            <div class="navbar-dropdown">
-              <a class="navbar-item">About</a>
-              <a class="navbar-item">Jobs</a>
-              <a class="navbar-item">Contact</a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">Report an issue</a>
-            </div>
-          </div>
         </div>
 
         <div class="navbar-end">
@@ -55,11 +51,20 @@
             <div class="buttons">
               <a class="button is-primary is-outlined">
                 <span class="icon">
-                  <i class="fa fa-download"></i>
+                  <i class="fab fa-github"></i>
                 </span>
-                <strong>Sign up</strong>
+                <a href="https://github.com/elaineleeworld" target="_blank">
+                  <strong>GitHub</strong>
+                </a>
               </a>
-              <a class="button is-light">Log in</a>
+              <a class="button is-primary is-outlined">
+                <span class="icon">
+                  <i class="fab fa-codepen"></i>
+                </span>
+                <a href="https://codepen.io/elaineleeworld/" target="_blank">
+                  <strong>CodePen</strong>
+                </a>
+              </a>
             </div>
           </div>
         </div>
@@ -67,6 +72,27 @@
     </nav>
 
     <router-view>test</router-view>
+
+    <footer class="footer is-primary">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <p>Crafted with &#10084; in Los Angeles, California @All Rights Reserved. Powered by Elaine Lee</p>
+          </div>
+        </div>
+        <div class="column has-text-center">
+          <a class="icon" href="https://www.linkedin.com/in/elaineleeworld/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a class="icon" href="https://github.com/elaineleeworld/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="icon" href="https://codepen.io/elaineleeworld/" target="_blank">
+            <i class="fab fa-codepen"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -92,12 +118,13 @@ export default {
 @import 'mq'
 
 .navbar
- 
   a:hover
     color:gray
 .nav-left  a
   color: #fff
   font-weight: bold
+.navbar-item 
+      color: #000
 a.r-item  
   color: #C1C1C1
   padding: 0.5rem 1.75rem
@@ -105,7 +132,21 @@ a.r-item
     color:gray
     &:hover
       background-color: #F1F1F1
+footer
+  background-color: $primary !important
+  color: #fff
+  height: 30px
+  text-align: center
+  padding: 3rem 1.5rem 8rem !important
 
+  .icon 
+    color: #fff
+    margin-left: 20px
+    font-size: 30px
+
+.fa-laptop-code
+    background-color: transparent
+    color: #00d1b2
 
 
 </style>
