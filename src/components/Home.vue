@@ -50,7 +50,7 @@
             <div class="card-content">
               <p
                 class="title"
-              >Front-End Developer creating HTML Banner Ads, custom ReactJS websites, Email Templates, Mobile friendly pages</p>
+              >Front-End Developer creating HTML Banner Ads, custom ReactJS websites, Email Templates, Mobile friendly</p>
               <p class="subtitle">Red Interactive Agency</p>
             </div>
           </div>
