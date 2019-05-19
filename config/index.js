@@ -7,7 +7,7 @@ module.exports = {
   dev: {
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/compare-vue/',
+    assetsPublicPath: '/compare-vue/dist',
     proxyTable: {},
 
     // Various Dev Server settings
